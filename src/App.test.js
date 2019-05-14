@@ -10,13 +10,13 @@ describe('<App />', () => {
 	// strikes
 	it('should successfully strike', () => {
 		const { getByText, getAllByText } = render(<App />);
-		const button = getAllByText(/Strike/i)[1];
+		const button = getByText('Strike');
 		fireEvent.click(button);
 		getAllByText(/1/)[1];
 	});
 	it('should successfully reset strike', () => {
 		const { getByText, getAllByText } = render(<App />);
-		const button = getAllByText(/Strike/i)[1];
+		const button = getByText('Strike');
 		fireEvent.click(button);
 		fireEvent.click(button);
 		fireEvent.click(button);
@@ -25,13 +25,13 @@ describe('<App />', () => {
 	// balls
 	it('should successfully balls', () => {
 		const { getByText, getAllByText } = render(<App />);
-		const button = getAllByText(/Ball/i)[1];
+		const button = getByText('Ball');
 		fireEvent.click(button);
 		getAllByText(/1/)[1];
 	});
 	it('should successfully reset balls', () => {
 		const { getByText, getAllByText } = render(<App />);
-		const button = getAllByText(/Ball/i)[1];
+		const button = getByText('Ball');
 		fireEvent.click(button);
 		fireEvent.click(button);
 		fireEvent.click(button);
